@@ -46,3 +46,30 @@ console.log('\n')
 for (var i=0; i<personas.length; i++) {
     console.log( `${personas[i].nombre} ${personas[i].apellido}` )
 }
+
+// Uso de filtros con arreglos
+const esAlta =(objeto) => objeto.altura >= 1.70
+var personasAltas = personas.filter (esAlta)
+
+console.log (personasAltas)
+for (persona of personasAltas) {
+    console.log( `${persona.nombre} ${persona.apellido}` )
+}
+
+// Uso de la funcion map con arreglos
+const pasarAlturasMetros = (objeto) =>  {
+    objeto.altura = objeto.altura/100
+    return objeto
+}
+
+var otrasPersonas = [
+    ]
+
+    for (personas of personas) {
+otrasPersonas.push( { ...persona })
+ }
+
+
+otrasPersonas.map (pasarAlturasMetros)
+console.log (personas)
+console.log (otrasPersonas)
